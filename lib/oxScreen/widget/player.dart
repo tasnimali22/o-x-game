@@ -3,6 +3,8 @@ import 'package:oxgame/const.dart';
 
 class Players extends StatelessWidget {
   const Players({super.key});
+  final String player1 = "0";
+  final String player2 = "0";
 
   @override
   Widget build(BuildContext context) {
