@@ -3,7 +3,9 @@ import 'package:oxgame/oxScreen/widget/customGraidView.dart';
 import 'package:oxgame/oxScreen/widget/player.dart';
 
 class OxScreen extends StatelessWidget {
-  const OxScreen({super.key});
+  const OxScreen({super.key, required this.player1, required this.player2});
+  final String player1;
+  final String player2;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class OxScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Players(),
+          Players(player1: '', player2: ''),
           SizedBox(height: 50),
           Expanded(
             child: Padding(

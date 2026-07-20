@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFiled extends StatelessWidget {
-  const CustomTextFiled({this.onchanged, super.key, required this.hintText});
-  final String? hintText;
+  const CustomTextFiled({
+    this.onchanged,
+    super.key,
+    required this.hintText,
+    required this.label,
+    required this.controller,
+  });
+  final String hintText;
+  final String label;
   final Function(String)? onchanged;
-
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -13,8 +20,10 @@ class CustomTextFiled extends StatelessWidget {
           return 'this filed is empty';
         }
       },
+      controller: controller,
       onChanged: onchanged,
       decoration: InputDecoration(
+        labelText: label,
         hintText: hintText,
         hintStyle: TextStyle(color: Colors.white),
         enabledBorder: OutlineInputBorder(

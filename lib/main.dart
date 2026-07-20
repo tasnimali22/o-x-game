@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxgame/const.dart';
-import 'package:oxgame/oxScreen/oxScreen.dart';
+import 'package:oxgame/splash/splash.dart';
 
 void main() {
   runApp(const Ox_game());
@@ -13,11 +13,10 @@ class Ox_game extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: {},
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kkcolor),
 
-      home: OxScreen(),
+      home: Splash(),
     );
   }
 }
